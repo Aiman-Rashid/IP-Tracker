@@ -42,8 +42,8 @@ function App() {
     <meta property="og:title" content="IP Tracker" />
     <meta property="og:description" content="Find detailed information about any IP address or domain." />
     <meta property="og:image" content="/assets/img/ogImg.png" />
-    <meta property="og:url" content="http://yourdomain.com" />
-    <link rel="canonical" href="http://yourdomain.com" />
+    <meta property="og:url" content={process.env.REACT_APP_PUBLIC_URL} />
+    <link rel="canonical" href={process.env.REACT_APP_PUBLIC_URL} />
   </Helmet>
     < div className="app-container">
     <div className="uppersection" >
