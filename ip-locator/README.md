@@ -1,6 +1,6 @@
 # IP Address Tracker
 
-![Desktop Preview](/assets/img/ogImg.png)
+![Desktop Preview](./assets/img/ogImg.png)
 
 ## Overview
 
