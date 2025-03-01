@@ -46,14 +46,23 @@ The IP Address Tracker is a web application that allows users to quickly view ge
 ## Project Structure
 /src
 ├── /Components
+
 │   ├── HeaderSectionFolder/HeaderSection.jsx   // Contains the header (with semantic <header>) and search form
+
 │   ├── InfoFolder/Info.jsx                       // Displays IP details (IP, location, ISP, timezone)
+
 │   ├── MapFolder/Map.jsx                         // Renders the interactive map using Leaflet
+
 │   ├── Loader.jsx                               // Loading indicator component
+
 ├── /utils
+
 │   ├── fetchData.js                             // Function to fetch geolocation data using Axios
+
 ├── App.jsx                                      // Main application component
+
 ├── App.css                                      // Global styles
+
 └── index.js                                     // Application entry point
 
 ## License
