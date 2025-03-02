@@ -25,7 +25,7 @@ const HeaderSection = ({ onSearch }) => {
           type="text" 
           name="SearchBox" 
           id="SearchBox" 
-          placeholder="Search for any IP address and Domain" 
+          placeholder="Search for any IP address " 
           required 
           value={ipAddress} 
           onChange={(e) => setIpAddress(e.target.value)} 

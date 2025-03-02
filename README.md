@@ -4,13 +4,13 @@
 
 ## Overview
 
-The IP Address Tracker is a web application that allows users to quickly view geolocation information for any IP address or domain. On page load, the app automatically displays the user's current IP details (location, ISP, timezone) on an interactive map. Users can also search for any IP address or domain to retrieve up-to-date information.
+The IP Address Tracker is a web application that allows users to quickly view geolocation information for any IP address . On page load, the app automatically displays the user's current IP details (location, ISP, timezone) on an interactive map. Users can also search for any IP address to retrieve up-to-date information.
 
 ## Features
 
 - **Responsive Design:** Optimized for both mobile and desktop devices.
 - **Automatic IP Lookup:** Fetches and displays your IP details on initial load.
-- **Search Functionality:** Enter any IP address or domain to view its geolocation data.
+- **Search Functionality:** Enter any IP address  to view its geolocation data.
 - **Interactive Map:** Built with LeafletJS for dynamic map rendering and smooth transitions.
 - **Error Handling:** Displays user-friendly error messages for invalid inputs.
 - **SEO Optimization:** Meta tags are dynamically managed with React Helmet using environment variables.

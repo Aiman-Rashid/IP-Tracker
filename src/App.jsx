@@ -12,7 +12,7 @@ function App() {
 
   const [error, setError] = useState(null);
   useEffect(() => {
-    fetch("http://ip-api.com/json/")
+    fetch("https://ipwho.is/")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "fail") {
@@ -44,7 +44,7 @@ function App() {
     <main>
     <section className='map-container'>
       {ipData ? (
-       <Map key={ipData?.query} latitude={ipData?.lat} longitude={ipData?.lon} />
+       <Map key={ipData?.ip} latitude={ipData?.latitude} longitude={ipData?.longitude} />
       ) : (
         error ?  (<div className="error-message">{error}</div>) :(<Loader/>)
        

@@ -1,23 +1,6 @@
 import { Card, CardContent, Typography, Grid, Box } from '@mui/material';
 import './info.css';
-const getUTCOffset = (timezone) => {
-  try {
-    if (!timezone) return "N/A"; // Handle missing data
 
-    const now = new Date();
-    const formatter = new Intl.DateTimeFormat("en-US", {
-      timeZone: timezone,
-      timeZoneName: "shortOffset",
-    });
-
-    // Extract UTC offset from formatted string
-    const offset = formatter.formatToParts(now).find((part) => part.type === "timeZoneName")?.value;
-    return offset || "N/A";
-  } catch (error) {
-    console.error("Error getting UTC offset:", error);
-    return "N/A";
-  }
-};
 const InfoCard = ({ ipData }) => {
   return (
     <Card
@@ -54,7 +37,7 @@ const InfoCard = ({ ipData }) => {
               IP ADDRESS
             </Typography>
             <Typography variant="h6" className='secText'>
-              {ipData?.query || "N/A"}  {/* ✅ Display actual IP Address */}
+              {ipData?.ip || "N/A"}  {/* ✅ Display actual IP Address */}
             </Typography>
           </CardContent>
         </Grid>
@@ -69,7 +52,7 @@ const InfoCard = ({ ipData }) => {
               LOCATION
             </Typography>
             <Typography variant="h6" className='secText'>
-              {ipData?.city}, {ipData?.regionName} {/* ✅ Display actual City & Region */}
+              {ipData?.city}, {ipData?.region} {/* ✅ Display actual City & Region */}
             </Typography>
           </CardContent>
         </Grid>
@@ -84,7 +67,7 @@ const InfoCard = ({ ipData }) => {
               TIMEZONE
             </Typography>
             <Typography variant="h6" className='secText'>
-             {getUTCOffset(ipData?.timezone)}{getUTCOffset(ipData?.timezone)} {/* ✅ Display actual Timezone */}
+         {ipData?.timezone.utc}
             </Typography>
           </CardContent>
         </Grid>
@@ -99,7 +82,7 @@ const InfoCard = ({ ipData }) => {
               ISP
             </Typography>
             <Typography variant="h6" className='secText'>
-              {ipData?.isp || "N/A"}  {/* ✅ Display actual ISP */}
+              {ipData?.connection?.org  || "N/A"}  {/* ✅ Display actual ISP */}
             </Typography>
           </CardContent>
         </Grid>

@@ -3,9 +3,9 @@
 import axios from "axios"
 export const fetchGeoData = async (userInput, setIpData,setError) => {
   try {
-    const response = await axios.get(`http://ip-api.com/json/${userInput}`); // ✅ Use `https`
-    if (response.data.status === "fail") {
-      setError(response.data.message || "Invalid IP address or domain");
+    const response = await axios.get(`https://ipwho.is/${userInput}`); 
+    if (!response.data.success) {
+      setError(response.data.message || "Invalid IP address ");
       setIpData(null);
     } else {
       setIpData(response.data);
